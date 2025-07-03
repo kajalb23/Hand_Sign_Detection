@@ -8,7 +8,11 @@ Ideal for gesture-based interfaces, accessibility tools, and assistive technolog
 Install the required Python libraries using pip:
 
 !pip install opencv-python mediapipe scikit-learn matplotlib numpy
-Workflow Overview
+
+
+# Workflow Overview
+
+
 ## 1. Data Collection (collect_images.py)
    1. Captures hand gesture images from the webcam.
    2. Press Q to begin image collection for each class.
