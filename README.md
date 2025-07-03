@@ -9,8 +9,8 @@ Install the required Python libraries using pip:
 !pip install opencv-python mediapipe scikit-learn matplotlib numpy
 Workflow Overview
 ## 1. Data Collection (collect_images.py)
-   Captures hand gesture images from the webcam.
-   Press Q to begin image collection for each class.
+   1. Captures hand gesture images from the webcam.
+   2. Press Q to begin image collection for each class.
    Stores 100 images for each of the 26 classes (A–Z) in separate directories under ./data/.
 
 ## 2. Data Preprocessing (preprocess_data.py)
