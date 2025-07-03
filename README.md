@@ -11,25 +11,25 @@ Workflow Overview
 ## 1. Data Collection (collect_images.py)
    1. Captures hand gesture images from the webcam.
    2. Press Q to begin image collection for each class.
-   Stores 100 images for each of the 26 classes (A–Z) in separate directories under ./data/.
+   3. Stores 100 images for each of the 26 classes (A–Z) in separate directories under ./data/.
 
 ## 2. Data Preprocessing (preprocess_data.py)
-   Uses Mediapipe Hands to extract 21 hand landmarks (x, y coordinates).
-   Normalizes coordinates relative to the bounding box.
-   Saves preprocessed data and labels to a file named data.pickle.
+   1. Uses Mediapipe Hands to extract 21 hand landmarks (x, y coordinates).
+   2. Normalizes coordinates relative to the bounding box.
+   3. Saves preprocessed data and labels to a file named data.pickle.
 
 ## 3. Model Training (train_model.py)
-   Loads the landmark data and labels from data.pickle.
-   Ensures consistent input shape using padding/truncation.
-   Trains a Random Forest Classifier using scikit-learn.
-   Evaluates model performance and saves the trained model as model.p.
+   1. Loads the landmark data and labels from data.pickle.
+   2. Ensures consistent input shape using padding/truncation.
+   3. Trains a Random Forest Classifier using scikit-learn.
+   4. Evaluates model performance and saves the trained model as model.p.
 
 ## 4. Real-Time Prediction (predict_realtime.py)
-   Captures live webcam feed.
-   Detects hand landmarks using Mediapipe.
-   Extracts and normalizes features.
-   Loads the trained model to predict hand signs in real time.
-   Displays predictions on-screen with bounding boxes and alphabet labels.
+   1. Captures live webcam feed.
+   2. Detects hand landmarks using Mediapipe.
+   3. Extracts and normalizes features.
+   4. Loads the trained model to predict hand signs in real time.
+   5. Displays predictions on-screen with bounding boxes and alphabet labels.
 
 ## Label Mapping
 Each class number corresponds to an uppercase English alphabet letter:
@@ -65,18 +65,18 @@ Each class number corresponds to an uppercase English alphabet letter:
 
 
 ## Suggestions for Improvement :
-   Collect more data per class to improve model robustness.
-   Use deep learning models such as CNNs or RNNs for higher accuracy.
+   1. Collect more data per class to improve model robustness.
+   2. Use deep learning models such as CNNs or RNNs for higher accuracy.
 
 ## Tools & Concepts Used :
-   OpenCV – For video capture and image handling
-   Mediapipe – For real-time hand landmark detection
-   scikit-learn – For training and evaluating machine learning models
-   Random Forest – As the primary classification algorithm
-   Pickle – For saving and loading models and data
+   1. OpenCV – For video capture and image handling
+   2. Mediapipe – For real-time hand landmark detection
+   3. scikit-learn – For training and evaluating machine learning models
+   4. Random Forest – As the primary classification algorithm
+   5. Pickle – For saving and loading models and data
 
 ## Acknowledgements :
-   Mediapipe by Google – Hand tracking and landmark detection
-   scikit-learn – Machine learning library used for model training and evaluation
+   1. Mediapipe by Google – Hand tracking and landmark detection
+   2. scikit-learn – Machine learning library used for model training and evaluation
 
 
